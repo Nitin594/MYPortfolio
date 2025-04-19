@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav id="profile">
             <div class="left">
                 Nitin's Portfolio
             </div>
@@ -42,7 +42,7 @@
         <section class="firstSection">
             <div class="leftSection">
                 Hi, I'm <span class="purple">Nitin Maurya</span>.
-                <p>I'm a <span id="element"></span><br> with a passion for creating beautiful and functional websites.
+                <p>I'm a <span id="element" ></span><br> with a passion for creating beautiful and functional websites.
                 </p>
                 <!-- <div class="button">
                     <button class="btn">Download Resume</button>
@@ -192,7 +192,8 @@
                 <p>Feel free to reach out through any platform below:</p>
 
                 <div class="social-links">
-                    <a href="https://www.instagram.com/nitin_maurya59?igsh=cG43dWJlbTFld2p0" target="_blank" class="social instagram">
+                    <a href="https://www.instagram.com/nitin_maurya59?igsh=cG43dWJlbTFld2p0" target="_blank"
+                        class="social instagram">
                         <i class="fab fa-instagram"></i>
                         <span>Instagram</span>
                     </a>
@@ -202,12 +203,14 @@
                         <span>YouTube</span>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/nitin-maurya-562816321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social linkedin">
+                    <a href="https://www.linkedin.com/in/nitin-maurya-562816321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank" class="social linkedin">
                         <i class="fab fa-linkedin-in"></i>
                         <span>LinkedIn</span>
                     </a>
 
-                    <a href="https://x.com/NMaurya53180?t=wXeNkRbKMXG81YK7Z7ks7g&s=09" target="_blank" class="social twitter">
+                    <a href="https://x.com/NMaurya53180?t=wXeNkRbKMXG81YK7Z7ks7g&s=09" target="_blank"
+                        class="social twitter">
                         <i class="fab fa-twitter"></i>
                         <span>Twitter</span>
                     </a>
@@ -225,30 +228,35 @@
                         Nitin's Developer Portfolio
                     </h1>
                 </div>
-                <div class="footer-second">
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
                 <div class="footer-third">
                     <ul>
                         <li class="footer-third-li">Social Media</li>
-                        <li class="footer-third-li"><a href="https://www.instagram.com/nitin_maurya59?igsh=cG43dWJlbTFld2p0">Instagram</a></li>
-                        <li class="footer-third-li"><a href="https://x.com/NMaurya53180?t=wXeNkRbKMXG81YK7Z7ks7g&s=09">Twitter</a></li>
-                        <li class="footer-third-li"><a href="
+                        <li class="footer-third-li"><a
+                                href="https://www.instagram.com/nitin_maurya59?igsh=cG43dWJlbTFld2p0">Instagram</a></li>
+                        <li class="footer-third-li"><a
+                                href="https://x.com/NMaurya53180?t=wXeNkRbKMXG81YK7Z7ks7g&s=09">Twitter</a></li>
+                        <li class="footer-third-li"><a
+                                href="
                                 https://www.linkedin.com/in/nitin-maurya-562816321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"">Linkedn</a>
                         </li>
                     </ul>
                 </div>
+                <div class="footer-second">
+                    <ul>
+                        <li><a href="#profile">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skill</a></li>
+                        
+                    </ul>
+                </div>
+                
                 <div class=" footer-fourth">
                                 <ul>
-                                    <li>Home</li>
-                                    <li>About</li>
-                                    <li>Services</li>
-                                    <li>Contact</li>
+                                    
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li>Thanks to Visit!</li>
                                 </ul>
                 </div>
 
@@ -263,8 +271,7 @@
                 <div class="container">
                     <div class="hm-footer-copyright text-center">
                         <p>
-                            &copy; copyright Nitin Maurya. design and developed by <a
-                                href="index.html">Nitin</a>
+                            &copy; copyright Nitin Maurya. design and developed by <a href="index.html">Nitin</a>
                         </p><!--/p-->
                     </div><!--/.text-center-->
                 </div><!--/.container-->
@@ -280,6 +287,21 @@
             typeSpeed: 50,
         });
     </script>
+    <script>
+        window.addEventListener('scroll', function () {
+          const skillSection = document.querySelector('.skills-section');
+          const skillBars = document.querySelectorAll('.bar span');
+          const sectionPos = skillSection.getBoundingClientRect().top;
+          const screenPos = window.innerHeight;
+      
+          if (sectionPos < screenPos - 100) {
+            skillBars.forEach((bar) => {
+              bar.classList.add('animate');
+            });
+          }
+        });
+      </script>
+      
 </body>
 
 </html>
